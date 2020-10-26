@@ -1,8 +1,21 @@
-**/*
-!**/*.*
-!**/*/
+# Need to ignore all extensionless files (for any c++ executables)
+# Ignore all
+*
+# Unignore all with extensions
+!*.*
+# Unignore all directories
+!*/
+# Unignore special extensionless files
+!Makefile
+!scripts/**
+
+# For Mac
 *.DS_Store
+
+# For VS Code
 .vscode
 *.dSYM
+
+# For executables
 *.exe
 *.out
