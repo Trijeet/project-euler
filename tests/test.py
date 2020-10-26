@@ -1,7 +1,9 @@
 import os
+import sys
 import json
 from colorama import Fore, Back, Style
 
+failed_tests = -1
 with open('solutions.json') as solutions:
     data = json.load(solutions)
     total_tests = len(data['problems'])
@@ -41,3 +43,7 @@ with open('solutions.json') as solutions:
     if (result):
         print("Error in deleting files")
         print(result)
+if (failed_tests != 0):
+    sys.exit(1)
+else:
+    sys.exit(0)
