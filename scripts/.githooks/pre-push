@@ -1,7 +1,6 @@
 #!/bin/sh
 
-cd tests/
-CMD="python3 test.py"
+CMD="make test"
 eval $CMD
 RESULT=$?
 if [ $RESULT -ne 0 ]; then
