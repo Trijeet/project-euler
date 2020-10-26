@@ -19,7 +19,7 @@ int main()
         c = a + b;
     }
 
-    sum += b;
+    sum += 2;
     cout<<sum<<"\n";
 
     return 0;
