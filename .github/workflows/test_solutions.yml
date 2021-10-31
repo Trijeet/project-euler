@@ -1,0 +1,30 @@
+name: Test Solutions
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - ready_for_review
+    branches:
+      - main
+
+jobs:
+  solution_tests:
+    name: Test Solutions
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Running tests
+        run: |
+          git clone --single-branch -b "${GITHUB_HEAD_REF}" https://github.com/Trijeet/project-euler.git
+          cd project-euler
+          CMD="make test"
+          eval $CMD
+          RESULT=$?
+          if [ $RESULT -ne 0 ]; then
+              echo "failed $CMD"
+              exit 1
+          fi
+          exit 0
