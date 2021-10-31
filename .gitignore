@@ -12,9 +12,10 @@
 # For Mac
 *.DS_Store
 
-# For VS Code
+# For IDEs
 .vscode
 *.dSYM
+.idea
 
 # For executables
 *.exe
