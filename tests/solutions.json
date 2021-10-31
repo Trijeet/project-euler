@@ -1,24 +1,7 @@
 {
-    "problems": [
-        {
-            "filename": "1.cpp",
-            "solution": "233168"
-        },
-        {
-            "filename": "2.cpp",
-            "solution": "4613732"
-        },
-        {
-            "filename": "31.cpp",
-            "solution": "73682"
-        },
-        {
-            "filename": "3.cpp",
-            "solution": "6857"
-        },
-        {
-            "filename": "4.cpp",
-            "solution": "906609"
-        }
-    ]
+    "1.cpp" : "233168",
+    "2.cpp" : "4613732",
+    "3.cpp" : "6857",
+    "4.cpp" : "906609",
+    "31.cpp" : "73682"
 }

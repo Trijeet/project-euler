@@ -6,12 +6,12 @@ from colorama import Fore, Back, Style
 failed_tests = -1
 with open('solutions.json') as solutions:
     data = json.load(solutions)
-    total_tests = len(data['problems'])
+    total_tests = len(data)
     correct_tests = 0
     failed_tests = 0
-    for problem in data['problems']:
-        filename = problem['filename']
-        answer = str(problem['solution'])
+    for key in data:
+        filename = key
+        answer = data[key]
 
         #Execute file and get answer
         exec_file = filename + ".exe"
@@ -43,7 +43,7 @@ with open('solutions.json') as solutions:
     if (result):
         print("Error in deleting files")
         print(result)
-if (failed_tests != 0):
+if failed_tests != 0:
     sys.exit(1)
 else:
     sys.exit(0)
