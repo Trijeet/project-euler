@@ -15,7 +15,7 @@ with open('solutions.json') as solutions:
 
         #Execute file and get answer
         exec_file = filename + ".exe"
-        cmd = "g++ ../solutions/" + filename + " -o " + exec_file
+        cmd = "g++ -w ../solutions/" + filename + " -o " + exec_file
         result = os.system(cmd)
         if result:
             print("Error caught at running file " + filename)
